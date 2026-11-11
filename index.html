@@ -8,12 +8,12 @@
 <title>KUVAG | Adventní kalendář 2026</title>
 <style>
 :root{--forest:#173b32;--deep:#102a24;--gold:#d8b66a;--cream:#fff8e9;--red:#8c3c35;--ink:#26352e}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--cream);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 12% 8%,#385b50 0,transparent 34%),radial-gradient(ellipse at 88% 18%,#6b3438 0,transparent 30%),radial-gradient(ellipse at 50% 100%,#203f50 0,transparent 48%),linear-gradient(145deg,#101d35 0%,#172b3b 48%,#10251f 100%);overflow-x:hidden}
-body:before{content:"❄     ✦       ❄        ✧       ❄       ✦       ❄";position:fixed;inset:18px 0 auto;text-align:center;color:#f2dfb0;opacity:.62;letter-spacing:.8rem;font:24px Georgia,serif;pointer-events:none;z-index:0}body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(2px 2px at 8% 18%,#fff 99%,transparent),radial-gradient(2px 2px at 22% 72%,#fff 99%,transparent),radial-gradient(3px 3px at 38% 34%,#fff 99%,transparent),radial-gradient(2px 2px at 57% 12%,#fff 99%,transparent),radial-gradient(2px 2px at 73% 63%,#fff 99%,transparent),radial-gradient(3px 3px at 91% 29%,#fff 99%,transparent),radial-gradient(2px 2px at 84% 88%,#fff 99%,transparent);background-size:320px 260px;z-index:0}
-.wrap{position:relative;z-index:1;width:min(1100px,92vw);margin:auto;padding:55px 0 70px}.top{text-align:center;margin-bottom:30px}.eyebrow{color:#e8cc8c;letter-spacing:.28em;text-transform:uppercase;font:600 11px Arial,sans-serif}.top h1{font-size:clamp(38px,7vw,68px);line-height:1.02;margin:14px 0 10px;font-weight:normal;text-shadow:0 4px 24px #081c16}.top p{font:15px/1.6 Arial,sans-serif;color:#e8e3d3;margin:0}.rule{width:100px;height:1px;background:var(--gold);margin:22px auto}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--cream);font-family:Georgia,'Times New Roman',serif;background:linear-gradient(90deg,rgba(10,24,25,.28),rgba(10,24,25,.12) 50%,rgba(10,24,25,.28)),url("vanocni-pozadi.jpg") center/cover fixed no-repeat,linear-gradient(145deg,#263b49,#10251f);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(10,24,25,.12),rgba(10,24,25,.28));pointer-events:none;z-index:0}body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(2px 2px at 8% 18%,#fff 99%,transparent),radial-gradient(2px 2px at 22% 72%,#fff 99%,transparent),radial-gradient(3px 3px at 38% 34%,#fff 99%,transparent),radial-gradient(2px 2px at 57% 12%,#fff 99%,transparent),radial-gradient(2px 2px at 73% 63%,#fff 99%,transparent),radial-gradient(3px 3px at 91% 29%,#fff 99%,transparent),radial-gradient(2px 2px at 84% 88%,#fff 99%,transparent);background-size:320px 260px;z-index:0}
+.wrap{position:relative;z-index:1;width:min(1100px,92vw);margin:auto;padding:55px 0 70px}.top{text-align:center;margin-bottom:30px}.eyebrow{color:#e8cc8c;letter-spacing:.28em;text-transform:uppercase;font:600 11px Arial,sans-serif}.top h1{font-size:clamp(38px,7vw,68px);line-height:1.02;margin:14px 0 10px;font-weight:normal;text-shadow:0 4px 24px #081c16}.top p{font:15px/1.6 Arial,sans-serif;color:#fff8e9;margin:0;text-shadow:0 2px 8px #17251f}.rule{width:100px;height:1px;background:var(--gold);margin:22px auto}.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px auto 30px}.countdown span{display:block;min-width:76px;padding:10px 12px;border:1px solid #f1dca4aa;border-radius:12px;background:rgba(18,43,39,.76);box-shadow:0 5px 18px #08171355}.countdown b{display:block;color:#ffe3a0;font:normal 27px Georgia,serif}.countdown small{display:block;margin-top:3px;color:#fff4db;font:9px Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
 .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
-.door{position:relative;min-height:145px;border:1px solid #d8b66a88;border-radius:12px;background:linear-gradient(145deg,#285342,#17382f 70%);color:var(--cream);cursor:pointer;box-shadow:0 9px 22px #071a1466;transition:transform .2s,box-shadow .2s;overflow:hidden}
-.door:hover{transform:translateY(-5px);box-shadow:0 14px 26px #071a1499}.door:before{content:"";position:absolute;inset:7px;border:1px solid #d8b66a55;border-radius:8px;pointer-events:none}.door .num{display:block;color:#e6c77f;font:italic 34px Georgia;margin-top:19px}.door .symbol{display:block;font-size:24px;margin:8px 0 2px}.door .hint{font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e8e1cf}.door.opened{background:linear-gradient(145deg,#8b6840,#59452f);border-color:#f0d89b}.door.locked{opacity:.62;cursor:not-allowed}.door.locked:hover{transform:none}
+.door{position:relative;min-height:145px;border:1px solid #f0d79a;border-radius:13px;background:linear-gradient(145deg,rgba(255,250,235,.96),rgba(232,216,181,.94));color:#254638;cursor:pointer;box-shadow:0 9px 24px #071a1477;transition:transform .2s,box-shadow .2s;overflow:hidden}
+.door:hover{transform:translateY(-5px);box-shadow:0 14px 26px #071a1499}.door:before{content:"";position:absolute;inset:7px;border:1px solid #b99555aa;border-radius:8px;pointer-events:none}.door .num{display:block;color:#234b3b;font:normal 43px Georgia;margin-top:23px}.door .symbol{display:none}.door .hint{display:inline-block;margin-top:12px;padding:5px 10px;border-radius:20px;background:#e6d4aa;color:#5d4727;font:9px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}.door.opened{background:linear-gradient(145deg,rgba(39,83,63,.96),rgba(21,54,43,.96));border-color:#f4d58c;color:#fff8e9}.door.opened .num{color:#ffe2a0}.door.opened .hint{background:#e8d7ad;color:#314b3c}.door.locked{opacity:.82;cursor:not-allowed}.door.locked .hint{background:#d6d0c2;color:#55584f}.door.locked:hover{transform:none}
 .note{text-align:center;color:#d7d2c4;font:12px Arial,sans-serif;margin:23px 0 0}
 footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing:.12em;margin-top:38px}
 .modal{position:fixed;inset:0;background:#06130fe8;display:none;align-items:center;justify-content:center;padding:20px;z-index:5}.modal.show{display:flex}.panel{width:min(520px,100%);background:linear-gradient(160deg,#fff8e9,#f0e3c8);color:var(--ink);border:2px solid var(--gold);border-radius:18px;padding:34px 28px;text-align:center;box-shadow:0 20px 80px #0009;position:relative}.close{position:absolute;right:15px;top:12px;border:0;background:none;color:#52645a;font-size:26px;cursor:pointer}.panel .day{font:11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#94713d}.panel h2{font-size:clamp(27px,5vw,39px);font-weight:normal;margin:12px 0;color:var(--forest)}.panel .intro{font:14px Arial,sans-serif;color:#59675d}.winners{display:grid;gap:12px;margin:24px 0}.winner{border:1px solid #d6c49e;border-radius:12px;padding:14px;background:#fffdf6}.winner strong{display:block;color:#234a3b;font-size:21px;font-weight:normal}.winner span{display:block;font:13px Arial,sans-serif;color:#756345;margin-top:5px}.gift{font-size:29px;margin:14px 0 5px}.giftname{font:16px Arial,sans-serif;font-weight:bold;color:#684b25}.small{font:11px Arial,sans-serif;color:#7c8176;line-height:1.5}.tag{display:inline-block;margin-top:18px;padding:8px 13px;border-radius:30px;background:#e8ddc4;color:#655330;font:10px Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
@@ -28,6 +28,7 @@ footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing
 <h1>Adventní kalendář</h1>
 <div class="rule"></div>
 <p>Každý den jedno okénko. Dva výherci. Jedno společné překvapení.</p>
+<div class="countdown" id="countdown" aria-live="polite"></div>
 </header>
 <section class="grid" id="calendar" aria-label="Adventní kalendář"></section>
 <p class="note">Otevřete si okénko a zjistěte, komu dnes přálo štěstí.</p>
@@ -51,14 +52,36 @@ const demo = [
 ["Eva Procházková","Tomáš Kučera","Kosmetická sada","🎀"],
 ["Anna Veselá","David Horák","Zimní čajový balíček","🍵"]
 ];
-const symbols=["❄️","🎁","⭐","🕯️","🔔","🎄"];
 const calendar=document.getElementById("calendar");
-for(let day=1;day<=24;day++){
- const b=document.createElement("button");b.className="door";b.type="button";
- b.innerHTML='<span class="num">'+day+'</span><span class="symbol">'+symbols[(day-1)%symbols.length]+'</span><span class="hint">Otevřít</span>';
- b.addEventListener("click",()=>openDay(day));calendar.appendChild(b);
+const doors=[];
+const nowPrague=()=>new Date(new Date().toLocaleString("en-US",{timeZone:"Europe/Prague"}));
+function refreshCalendar(){
+ const now=nowPrague();
+ doors.forEach(({button,day})=>{
+  const unlock=new Date(2026,11,day,0,0,0,0);
+  const unlocked=now>=unlock;
+  button.classList.toggle("locked",!unlocked);
+  button.classList.toggle("opened",unlocked);
+  button.disabled=!unlocked;
+  button.querySelector(".hint").textContent=unlocked?"Otevřít":"Zamčeno";
+  button.setAttribute("aria-label",unlocked?`Otevřít ${day}. prosince`:`${day}. prosince – zamčeno do správného dne`);
+ });
 }
+for(let day=1;day<=24;day++){
+ const b=document.createElement("button");b.className="door locked";b.type="button";
+ b.innerHTML='<span class="num">'+day+'</span><span class="hint">Zamčeno</span>';
+ b.addEventListener("click",()=>{if(!b.disabled)openDay(day)});calendar.appendChild(b);doors.push({button:b,day});
+}
+function updateCountdown(){
+ const now=nowPrague();const target=new Date(2026,11,24,0,0,0,0);let diff=target-now;
+ const el=document.getElementById("countdown");
+ if(diff<=0){el.innerHTML='<span><b>🎄</b><small>Veselé Vánoce!</small></span>';return}
+ const days=Math.floor(diff/86400000);diff%=86400000;const hours=Math.floor(diff/3600000);diff%=3600000;const minutes=Math.floor(diff/60000);const seconds=Math.floor((diff%60000)/1000);
+ el.innerHTML=`<span><b>${days}</b><small>Dní</small></span><span><b>${String(hours).padStart(2,"0")}</b><small>Hodin</small></span><span><b>${String(minutes).padStart(2,"0")}</b><small>Minut</small></span><span><b>${String(seconds).padStart(2,"0")}</b><small>Sekund</small></span>`;
+}
+refreshCalendar();updateCountdown();setInterval(()=>{refreshCalendar();updateCountdown()},1000);
 function openDay(day){
+ const now=nowPrague();if(now<new Date(2026,11,day,0,0,0,0))return;
  const item=demo[(day-1)%demo.length];
  document.getElementById("modalDay").textContent="ADVENTNÍ PŘEKVAPENÍ · "+day+". PROSINCE";
  document.getElementById("winners").innerHTML='<div class="winner"><strong>🏆 '+item[0]+'</strong><span>Dnešní výherce</span></div><div class="winner"><strong>🏆 '+item[1]+'</strong><span>Dnešní výherce</span></div>';
