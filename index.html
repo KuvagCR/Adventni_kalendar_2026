@@ -27,7 +27,7 @@ footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing
 <div class="eyebrow">KUVAG · společně v čase adventu</div>
 <h1>Adventní kalendář</h1>
 <div class="rule"></div>
-<p>Každý den jedno okénko. Dva výherci. Jedno společné překvapení.</p>
+<p>Každý den jedno okénko a dva výherci.</p>
 <div class="countdown" id="countdown" aria-live="polite"></div>
 </header>
 <section class="grid" id="calendar" aria-label="Adventní kalendář"></section>
@@ -113,7 +113,7 @@ function openDay(day){
  const item=demo[(day-1)%demo.length];
  document.getElementById("modalDay").textContent="ADVENTNÍ PŘEKVAPENÍ · "+day+". PROSINCE";
  document.getElementById("modalIntro").textContent=day<=2 && today<"2026-12-01"?"PREZENTAČNÍ UKÁZKA · JMÉNA I CENA JSOU SMYŠLENÉ":"Gratulujeme dnešním šťastlivcům!";
- document.getElementById("winners").innerHTML='<div class="winner"><strong>🏆 '+item[0]+'</strong><span>Dnešní výherce</span></div><div class="winner"><strong>🏆 '+item[1]+'</strong><span>Dnešní výherce</span></div>';
+ document.getElementById("winners").innerHTML='<div class="winner"><strong>'+item[0]+'</strong></div><div class="winner"><strong>'+item[1]+'</strong></div>';
  document.getElementById("gift").textContent=item[2];
  document.getElementById("wisdomText").textContent=sayings[day-1];
  document.getElementById("modal").classList.add("show");
