@@ -39,7 +39,7 @@ footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing
 <button class="close" id="close" aria-label="Zavřít">×</button>
 <div class="day" id="modalDay">ADVENTNÍ PŘEKVAPENÍ</div>
 <h2 id="modalTitle">Dnešními výherci se stávají…</h2>
-<p class="intro">Gratulujeme dnešním šťastlivcům!</p>
+<p class="intro" id="modalIntro">Gratulujeme dnešním šťastlivcům!</p>
 <div class="winners" id="winners"></div>
 <div class="gift">🎁</div><div class="giftname" id="gift"></div>
 <div class="tag">Krásný advent a hodně štěstí</div>
@@ -59,11 +59,11 @@ function refreshCalendar(){
  const today=pragueDateKey();
  doors.forEach(({button,day})=>{
   const unlockKey=`2026-12-${String(day).padStart(2,"0")}`;
-  const unlocked=today>=unlockKey;
+  const previewUnlock=today<"2026-12-01" && day<=2;\n  const unlocked=previewUnlock || today>=unlockKey;
   button.classList.toggle("locked",!unlocked);
   button.classList.toggle("opened",unlocked);
   button.disabled=!unlocked;
-  button.querySelector(".hint").textContent=unlocked?"Otevřít":"Zamčeno";
+  button.querySelector(".hint").textContent=previewUnlock?"Ukázka":(unlocked?"Otevřít":"Zamčeno");
   button.setAttribute("aria-label",unlocked?`Otevřít ${day}. prosince`:`${day}. prosince – zamčeno do správného dne`);
  });
 }
@@ -81,9 +81,9 @@ function updateCountdown(){
 }
 refreshCalendar();updateCountdown();setInterval(()=>{refreshCalendar();updateCountdown()},1000);
 function openDay(day){
- const unlock=Date.UTC(2026,11,day)-60*60*1000;if(Date.now()<unlock)return;
+ const today=pragueDateKey();const unlock=Date.UTC(2026,11,day)-60*60*1000;const previewUnlock=today<"2026-12-01" && day<=2;if(Date.now()<unlock && !previewUnlock)return;
  const item=demo[(day-1)%demo.length];
- document.getElementById("modalDay").textContent="ADVENTNÍ PŘEKVAPENÍ · "+day+". PROSINCE";
+ document.getElementById("modalDay").textContent="ADVENTNÍ PŘEKVAPENÍ · "+day+". PROSINCE";\n document.getElementById("modalIntro").textContent=day<=2 && today<"2026-12-01"?"PREZENTAČNÍ UKÁZKA · JMÉNA I CENA JSOU SMYŠLENÉ":"Gratulujeme dnešním šťastlivcům!";
  document.getElementById("winners").innerHTML='<div class="winner"><strong>🏆 '+item[0]+'</strong><span>Dnešní výherce</span></div><div class="winner"><strong>🏆 '+item[1]+'</strong><span>Dnešní výherce</span></div>';
  document.getElementById("gift").textContent=item[3]+" "+item[2];
  document.getElementById("modal").classList.add("show");
