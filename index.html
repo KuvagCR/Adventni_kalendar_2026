@@ -41,7 +41,7 @@ footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing
 <h2 id="modalTitle">Dnešními výherci se stávají…</h2>
 <p class="intro" id="modalIntro">Gratulujeme dnešním šťastlivcům!</p>
 <div class="winners" id="winners"></div>
-<div class="gift">🎁</div><div class="giftname" id="gift"></div>
+<div class="giftname" id="gift"></div>
 <div class="wisdom"><span class="wisdom-label">Myšlenka dne</span><span id="wisdomText"></span></div>
 <div class="tag">Krásný advent a hodně štěstí</div>
 </div>
@@ -114,7 +114,7 @@ function openDay(day){
  document.getElementById("modalDay").textContent="ADVENTNÍ PŘEKVAPENÍ · "+day+". PROSINCE";
  document.getElementById("modalIntro").textContent=day<=2 && today<"2026-12-01"?"PREZENTAČNÍ UKÁZKA · JMÉNA I CENA JSOU SMYŠLENÉ":"Gratulujeme dnešním šťastlivcům!";
  document.getElementById("winners").innerHTML='<div class="winner"><strong>🏆 '+item[0]+'</strong><span>Dnešní výherce</span></div><div class="winner"><strong>🏆 '+item[1]+'</strong><span>Dnešní výherce</span></div>';
- document.getElementById("gift").textContent=item[3]+" "+item[2];
+ document.getElementById("gift").textContent=item[2];
  document.getElementById("wisdomText").textContent=sayings[day-1];
  document.getElementById("modal").classList.add("show");
 }
