@@ -160,7 +160,7 @@ async function loginEmployee(){
  }catch(error){status.textContent=error.message.includes("Osobní číslo")?error.message:"Přihlášení se nezdařilo. Zkuste to prosím znovu.";status.classList.remove("success");}
  finally{button.disabled=false;button.textContent="Přihlásit";}
 }
-function logoutEmployee(){authToken="";localStorage.removeItem("kuvag-calendar-session");document.getElementById("employeeNumber").value="";document.getElementById("loginStatus").textContent="Byli jste odhlášeni.";setLoggedIn(null);}
+async function logoutEmployee(){try{if(authToken)await api("logout",{});}catch{}authToken="";localStorage.removeItem("kuvag-calendar-session");document.getElementById("employeeNumber").value="";document.getElementById("loginStatus").textContent="Byli jste odhlášeni.";setLoggedIn(null);}
 document.getElementById("loginButton").addEventListener("click",loginEmployee);
 document.getElementById("employeeNumber").addEventListener("keydown",e=>{if(e.key==="Enter")loginEmployee()});
 document.getElementById("logoutButton").addEventListener("click",logoutEmployee);
