@@ -14,7 +14,7 @@ body:before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,
 .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;max-width:900px;margin:0 auto}
 .door{position:relative;min-height:112px;border:1px solid #e8c77f;border-radius:13px;background:linear-gradient(145deg,#91485d,#702d43);color:#fff8e9;cursor:pointer;box-shadow:0 9px 24px #071a1477;transition:transform .2s,box-shadow .2s;overflow:hidden}
 .door:hover{transform:translateY(-5px);box-shadow:0 14px 26px #071a1499}.door:before{content:"";position:absolute;inset:7px;border:1px solid #b99555aa;border-radius:8px;pointer-events:none}.door .num{display:block;color:#ffe2a0;font:normal 46px Georgia;margin-top:12px}.door .symbol{display:none}.door .hint{display:inline-block;margin-top:9px;padding:5px 10px;border-radius:20px;background:#f0dba9;color:#542431;font:9px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}.door.opened{background:linear-gradient(145deg,#783047,#4b1d2c);border-color:#f4d58c;color:#fff8e9}.door.opened .num{color:#ffe2a0}.door.opened .hint{background:#f0dba9;color:#542431}.door.locked{opacity:.82;cursor:not-allowed}.door.locked .hint{background:#d8c5c0;color:#5b3940}.door.locked:hover{transform:none}
-.note{text-align:center;color:#d7d2c4;font:12px Arial,sans-serif;margin:23px 0 0}
+.demo-login{width:min(360px,92%);margin:20px auto 26px;padding:14px 16px;border:1px solid #e8c77f;border-radius:13px;background:rgba(75,31,43,.88);box-shadow:0 8px 22px #071a1477;text-align:left}.demo-login label{display:block;margin-bottom:8px;color:#ffe2a0;font:11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.demo-login-row{display:flex;gap:8px}.demo-login input{min-width:0;flex:1;padding:11px 12px;border:1px solid #d8bd80;border-radius:8px;background:#fff8e9;color:#4b1f2b;font:15px Arial,sans-serif}.demo-login button{padding:0 14px;border:1px solid #f0dba9;border-radius:8px;background:#f0dba9;color:#542431;font:bold 12px Arial,sans-serif;cursor:pointer}.demo-login p{margin:8px 0 0;color:#f4e8d0;font:11px/1.4 Arial,sans-serif}.demo-login p.success{color:#ffe2a0}.winner.is-me{border:2px solid #c79b38;background:#fff3cf;box-shadow:0 0 18px #d8b66a66}.winner.is-me strong{color:#8b5b12}.congrats{display:none;margin:16px 0 8px;padding:13px;border-radius:12px;background:linear-gradient(120deg,#fff0bd,#f5d98d);color:#6b3b18;font:bold 18px Georgia,serif}.congrats.show{display:block}.confetti-piece{position:fixed;top:-14px;width:9px;height:14px;z-index:20;pointer-events:none;animation:confetti-fall 3.2s linear forwards}@keyframes confetti-fall{to{transform:translate3d(var(--drift),110vh,0) rotate(780deg);opacity:.9}}.note{text-align:center;color:#d7d2c4;font:12px Arial,sans-serif;margin:23px 0 0}
 footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing:.12em;margin-top:38px}
 .modal{position:fixed;inset:0;background:#06130fe8;display:none;align-items:center;justify-content:center;padding:20px;z-index:5}.modal.show{display:flex}.panel{width:min(520px,100%);background:linear-gradient(160deg,#fff8e9,#f0e3c8);color:var(--ink);border:2px solid var(--gold);border-radius:18px;padding:34px 28px;text-align:center;box-shadow:0 20px 80px #0009;position:relative}.close{position:absolute;right:15px;top:12px;border:0;background:none;color:#52645a;font-size:26px;cursor:pointer}.panel .day{font:11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#94713d}.panel h2{font-size:clamp(27px,5vw,39px);font-weight:normal;margin:12px 0;color:var(--forest)}.panel .intro{font:14px Arial,sans-serif;color:#59675d}.winners{display:grid;gap:12px;margin:24px 0}.winner{border:1px solid #d6c49e;border-radius:12px;padding:14px;background:#fffdf6}.winner strong{display:block;color:#61283A;font-size:21px;font-weight:normal}.winner span{display:block;font:13px Arial,sans-serif;color:#756345;margin-top:5px}.gift{font-size:29px;margin:14px 0 5px}.giftname{font:16px Arial,sans-serif;font-weight:bold;color:#684b25}.wisdom{margin:22px 0 4px;padding:16px 18px;border-top:1px solid #d6c49e;border-bottom:1px solid #d6c49e;color:#6B4B50;font:italic 17px/1.5 Georgia,serif}.wisdom-label{display:block;margin-bottom:7px;color:#9a7945;font:9px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}.small{font:11px Arial,sans-serif;color:#7c8176;line-height:1.5}.tag{display:inline-block;margin-top:18px;padding:8px 13px;border-radius:30px;background:#e8ddc4;color:#655330;font:10px Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
 @media(max-width:760px){.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.door{min-height:104px}.door .num{font-size:38px}}
@@ -29,6 +29,7 @@ footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing
 <div class="rule"></div>
 <p>Každý den jedno okénko a dva výherci.</p>
 <div class="countdown" id="countdown" aria-live="polite"></div>
+<div class="demo-login"><label for="employeeNumber">Prezentační přihlášení – osobní číslo</label><div class="demo-login-row"><input id="employeeNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="Zadejte osobní číslo"><button id="loginButton" type="button">Přihlásit</button></div><p id="loginStatus">Pro ukázku použijte osobní číslo 111.</p></div>
 </header>
 <section class="grid" id="calendar" aria-label="Adventní kalendář"></section>
 <p class="note">Otevřete si okénko a zjistěte, komu dnes přálo štěstí.</p>
@@ -40,6 +41,7 @@ footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing
 <div class="day" id="modalDay">ADVENTNÍ PŘEKVAPENÍ</div>
 <h2 id="modalTitle">Dnešními výherci se stávají…</h2>
 <p class="intro" id="modalIntro">Gratulujeme dnešním šťastlivcům!</p>
+<div class="congrats" id="congrats">🎉 GRATULUJEME! Dnes vyhráváš! 🎉</div>
 <div class="winners" id="winners"></div>
 <div class="giftname" id="gift"></div>
 <div class="wisdom"><span class="wisdom-label">Myšlenka dne</span><span id="wisdomText"></span></div>
@@ -79,6 +81,8 @@ const sayings = [
   "Štěstí není mít všechno, ale umět ocenit to důležité.",
   "To nejhezčí z Vánoc si neodnášíme v tašce, ale v srdci."
 ];
+let demoLoggedIn=false;
+const demoEmployeeNumber="111";
 const calendar=document.getElementById("calendar");
 const doors=[];
 const pragueDateKey=()=>{const p=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Prague",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const v=Object.fromEntries(p.map(x=>[x.type,x.value]));return `${v.year}-${v.month}-${v.day}`;};
@@ -109,15 +113,23 @@ function updateCountdown(){
 }
 refreshCalendar();updateCountdown();setInterval(()=>{refreshCalendar();updateCountdown()},1000);
 function openDay(day){
+ if(!demoLoggedIn){document.getElementById("loginStatus").textContent="Nejprve se přihlaste osobním číslem 111.";document.getElementById("employeeNumber").focus();return;}
  const today=pragueDateKey();const unlock=Date.UTC(2026,11,day)-60*60*1000;const previewUnlock=today<"2026-12-01" && day<=2;if(Date.now()<unlock && !previewUnlock)return;
  const item=demo[(day-1)%demo.length];
  document.getElementById("modalDay").textContent="ADVENTNÍ PŘEKVAPENÍ · "+day+". PROSINCE";
  document.getElementById("modalIntro").textContent=day<=2 && today<"2026-12-01"?"PREZENTAČNÍ UKÁZKA · JMÉNA I CENA JSOU SMYŠLENÉ":"Gratulujeme dnešním šťastlivcům!";
- document.getElementById("winners").innerHTML='<div class="winner"><strong>'+item[0]+'</strong></div><div class="winner"><strong>'+item[1]+'</strong></div>';
+ const isDemoPreview=today<"2026-12-01";
+ const isDemoWinner=isDemoPreview && day===1 && demoLoggedIn;
+ document.getElementById("winners").innerHTML='<div class="winner '+(isDemoWinner?'is-me':'')+'"><strong>'+item[0]+'</strong>'+(isDemoWinner?'<span>To jste vy</span>':'')+'</div><div class="winner"><strong>'+item[1]+'</strong></div>';
+ const congrats=document.getElementById("congrats");congrats.classList.toggle("show",isDemoWinner);
+ if(isDemoWinner)launchConfetti();
  document.getElementById("gift").textContent=item[2];
  document.getElementById("wisdomText").textContent=sayings[day-1];
  document.getElementById("modal").classList.add("show");
 }
+function launchConfetti(){const colors=["#f6d77a","#fff1c7","#a94f68","#ffffff","#d9a441"];for(let i=0;i<90;i++){const piece=document.createElement("i");piece.className="confetti-piece";piece.style.left=Math.random()*100+"vw";piece.style.background=colors[i%colors.length];piece.style.setProperty("--drift",(Math.random()*220-110)+"px");piece.style.animationDelay=(Math.random()*.8)+"s";piece.style.transform="rotate("+Math.random()*360+"deg)";document.body.appendChild(piece);setTimeout(()=>piece.remove(),4200)}}
+function loginDemo(){const value=document.getElementById("employeeNumber").value.trim();const status=document.getElementById("loginStatus");if(value===demoEmployeeNumber){demoLoggedIn=true;status.textContent="Přihlášení pro prezentační ukázku proběhlo.";status.classList.add("success");document.getElementById("employeeNumber").disabled=true;document.getElementById("loginButton").disabled=true;document.getElementById("loginButton").textContent="Přihlášeno";}else{demoLoggedIn=false;status.textContent="Toto osobní číslo v ukázce neznáme. Zkuste 111.";status.classList.remove("success")}}
+document.getElementById("loginButton").addEventListener("click",loginDemo);document.getElementById("employeeNumber").addEventListener("keydown",e=>{if(e.key==="Enter")loginDemo()});
 function closeModal(){document.getElementById("modal").classList.remove("show")}
 document.getElementById("close").addEventListener("click",closeModal);
 document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
