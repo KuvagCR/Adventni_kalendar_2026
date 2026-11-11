@@ -10,7 +10,7 @@
 :root{--forest:#702D3B;--deep:#4B1F2B;--gold:#d8b66a;--cream:#fff8e9;--red:#8c3c35;--ink:#26352e}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--cream);font-family:Georgia,'Times New Roman',serif;background:linear-gradient(90deg,rgba(30,10,18,.30),rgba(30,10,18,.14) 50%,rgba(30,10,18,.30)),url("vanocni-pozadi.jpg.png") center/cover fixed no-repeat,linear-gradient(145deg,#56303B,#2B1720);overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(30,10,18,.14),rgba(30,10,18,.30));pointer-events:none;z-index:0}body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(2px 2px at 8% 18%,#fff 99%,transparent),radial-gradient(2px 2px at 22% 72%,#fff 99%,transparent),radial-gradient(3px 3px at 38% 34%,#fff 99%,transparent),radial-gradient(2px 2px at 57% 12%,#fff 99%,transparent),radial-gradient(2px 2px at 73% 63%,#fff 99%,transparent),radial-gradient(3px 3px at 91% 29%,#fff 99%,transparent),radial-gradient(2px 2px at 84% 88%,#fff 99%,transparent);background-size:320px 260px;z-index:0}
-.wrap{position:relative;z-index:1;width:min(1100px,92vw);margin:auto;padding:55px 0 70px}.top{text-align:center;margin-bottom:30px}.brand-logo{display:block;box-sizing:border-box;width:auto;height:auto;max-width:min(230px,58vw);max-height:112px;object-fit:contain;margin:0 auto 22px;padding:12px 22px;background:rgba(255,250,235,.96);border:1px solid #d8bd80;border-radius:12px;box-shadow:0 5px 22px #081c1680}.eyebrow{color:#e8cc8c;letter-spacing:.28em;text-transform:uppercase;font:600 11px Arial,sans-serif}.top h1{font-size:clamp(38px,7vw,68px);line-height:1.02;margin:14px 0 10px;font-weight:normal;text-shadow:0 4px 24px #081c16}.top p{font:15px/1.6 Arial,sans-serif;color:#fff8e9;margin:0;text-shadow:0 2px 8px #17251f}.rule{width:100px;height:1px;background:var(--gold);margin:22px auto}.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px auto 30px}.countdown span{display:block;min-width:76px;padding:10px 12px;border:1px solid #f1dca4aa;border-radius:12px;background:rgba(75,31,43,.82);box-shadow:0 5px 18px #08171355}.countdown b{display:block;color:#ffe3a0;font:normal 27px Georgia,serif}.countdown small{display:block;margin-top:3px;color:#fff4db;font:9px Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.wrap{position:relative;z-index:1;width:min(1100px,92vw);margin:auto;padding:55px 0 70px}.login-screen{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px}.login-card{width:min(480px,100%);padding:34px 26px;text-align:center;border:1px solid #e8c77f;border-radius:20px;background:rgba(75,31,43,.92);box-shadow:0 18px 55px #071a14aa;backdrop-filter:blur(5px)}.login-card .brand-logo{margin-bottom:24px}.login-card h1{font-size:clamp(34px,7vw,52px);font-weight:normal;margin:13px 0;color:#fff8e9;text-shadow:0 3px 18px #081c16}.login-lead{font:14px/1.6 Arial,sans-serif;color:#fff4db;margin:18px auto 22px;max-width:340px}.login-card .demo-login{width:100%;margin:0;padding:17px 0 0;border:0;border-top:1px solid #e8c77f88;border-radius:0;background:transparent;box-shadow:none}.login-card .demo-login label{font-size:12px}.login-card .demo-login-row input{min-height:46px}.login-card .demo-login-row button{min-height:46px;padding:0 18px}.login-card .demo-login p{font-size:12px}#calendarScreen[hidden],#loginScreen[hidden]{display:none!important}.top{text-align:center;margin-bottom:30px}.brand-logo{display:block;box-sizing:border-box;width:auto;height:auto;max-width:min(230px,58vw);max-height:112px;object-fit:contain;margin:0 auto 22px;padding:12px 22px;background:rgba(255,250,235,.96);border:1px solid #d8bd80;border-radius:12px;box-shadow:0 5px 22px #081c1680}.eyebrow{color:#e8cc8c;letter-spacing:.28em;text-transform:uppercase;font:600 11px Arial,sans-serif}.top h1{font-size:clamp(38px,7vw,68px);line-height:1.02;margin:14px 0 10px;font-weight:normal;text-shadow:0 4px 24px #081c16}.top p{font:15px/1.6 Arial,sans-serif;color:#fff8e9;margin:0;text-shadow:0 2px 8px #17251f}.rule{width:100px;height:1px;background:var(--gold);margin:22px auto}.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px auto 30px}.countdown span{display:block;min-width:76px;padding:10px 12px;border:1px solid #f1dca4aa;border-radius:12px;background:rgba(75,31,43,.82);box-shadow:0 5px 18px #08171355}.countdown b{display:block;color:#ffe3a0;font:normal 27px Georgia,serif}.countdown small{display:block;margin-top:3px;color:#fff4db;font:9px Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
 .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;max-width:900px;margin:0 auto}
 .door{position:relative;min-height:112px;border:1px solid #e8c77f;border-radius:13px;background:linear-gradient(145deg,#91485d,#702d43);color:#fff8e9;cursor:pointer;box-shadow:0 9px 24px #071a1477;transition:transform .2s,box-shadow .2s;overflow:hidden}
 .door:hover{transform:translateY(-5px);box-shadow:0 14px 26px #071a1499}.door:before{content:"";position:absolute;inset:7px;border:1px solid #b99555aa;border-radius:8px;pointer-events:none}.door .num{display:block;color:#ffe2a0;font:normal 46px Georgia;margin-top:12px}.door .symbol{display:none}.door .hint{display:inline-block;margin-top:9px;padding:5px 10px;border-radius:20px;background:#f0dba9;color:#542431;font:9px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}.door.opened{background:linear-gradient(145deg,#783047,#4b1d2c);border-color:#f4d58c;color:#fff8e9}.door.opened .num{color:#ffe2a0}.door.opened .hint{background:#f0dba9;color:#542431}.door.locked{opacity:.82;cursor:not-allowed}.door.locked .hint{background:#d8c5c0;color:#5b3940}.door.locked:hover{transform:none}
@@ -22,14 +22,27 @@ footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing
 </style>
 </head>
 <body>
-<main class="wrap">
+<section class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <img class="brand-logo" src="https://raw.githubusercontent.com/KuvagCR/kuvag-sifrovacky/main/logo%20bez%20pozad%C3%AD.png" alt="Logo KUVAG">
+    <div class="eyebrow">Vánoční překvapení 2026</div>
+    <h1>Adventní kalendář</h1>
+    <div class="rule"></div>
+    <p class="login-lead">Vítejte! Pro vstup do adventního kalendáře zadejte své osobní číslo.</p>
+    <div class="demo-login" id="loginBox">
+      <label for="employeeNumber">Osobní číslo zaměstnance</label>
+      <div class="demo-login-row"><input id="employeeNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="Zadejte osobní číslo"><button id="loginButton" type="button">Přihlásit</button></div>
+      <p id="loginStatus">Po ověření se vám otevře adventní kalendář.</p>
+    </div>
+  </div>
+</section>
+<main class="wrap" id="calendarScreen" hidden>
 <header class="top"><img class="brand-logo" src="https://raw.githubusercontent.com/KuvagCR/kuvag-sifrovacky/main/logo%20bez%20pozad%C3%AD.png" alt="Logo KUVAG">
-
 <h1>Adventní kalendář</h1>
 <div class="rule"></div>
 <p>Každý den jedno okénko a dva výherci.</p>
 <div class="countdown" id="countdown" aria-live="polite"></div>
-<div class="demo-login" id="loginBox"><label for="employeeNumber">Přihlášení zaměstnance – osobní číslo</label><div class="demo-login-row"><input id="employeeNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="Zadejte osobní číslo"><button id="loginButton" type="button">Přihlásit</button></div><p id="loginStatus">Zadejte své osobní číslo.</p></div><div class="demo-login account-info" id="accountBox" hidden><p class="success">Přihlášeno: <strong id="employeeName"></strong></p><button id="logoutButton" type="button">Odhlásit se</button></div>
+<div class="demo-login account-info" id="accountBox" hidden><p class="success">Přihlášeno: <strong id="employeeName"></strong></p><button id="logoutButton" type="button">Odhlásit se</button></div>
 </header>
 <section class="grid" id="calendar" aria-label="Adventní kalendář"></section>
 <p class="note">Otevřete si okénko a zjistěte, komu dnes přálo štěstí.</p>
@@ -90,7 +103,8 @@ async function api(action,payload={},token=authToken){
 }
 function setLoggedIn(employee,days=[]){
  currentEmployee=employee;openedDays=new Set((days||[]).map(Number));
- document.getElementById("loginBox").hidden=!!employee;
+ document.getElementById("loginScreen").hidden=!!employee;
+ document.getElementById("calendarScreen").hidden=!employee;
  document.getElementById("accountBox").hidden=!employee;
  document.getElementById("employeeName").textContent=employee?.full_name||"";
  refreshCalendar();
