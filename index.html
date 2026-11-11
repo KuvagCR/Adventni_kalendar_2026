@@ -41,7 +41,8 @@ footer{text-align:center;color:#c9c0a8;font:11px Arial,sans-serif;letter-spacing
 <h2 id="modalTitle">Dnešními výherci se stávají…</h2>
 <p class="intro" id="modalIntro">Gratulujeme dnešním šťastlivcům!</p>
 <div class="winners" id="winners"></div>
-<div class="gift">🎁</div><div class="giftname" id="gift"></div>\n<div class="wisdom"><span class="wisdom-label">Myšlenka dne</span><span id="wisdomText"></span></div>
+<div class="gift">🎁</div><div class="giftname" id="gift"></div>
+<div class="wisdom"><span class="wisdom-label">Myšlenka dne</span><span id="wisdomText"></span></div>
 <div class="tag">Krásný advent a hodně štěstí</div>
 </div>
 </div>
@@ -77,7 +78,8 @@ const sayings = [
   "Když si navzájem nasloucháme, nacházíme společnou cestu.",
   "Štěstí není mít všechno, ale umět ocenit to důležité.",
   "To nejhezčí z Vánoc si neodnášíme v tašce, ale v srdci."
-];\nconst calendar=document.getElementById("calendar");
+];
+const calendar=document.getElementById("calendar");
 const doors=[];
 const pragueDateKey=()=>{const p=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Prague",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const v=Object.fromEntries(p.map(x=>[x.type,x.value]));return `${v.year}-${v.month}-${v.day}`;};
 function refreshCalendar(){
@@ -112,7 +114,8 @@ function openDay(day){
  document.getElementById("modalDay").textContent="ADVENTNÍ PŘEKVAPENÍ · "+day+". PROSINCE";
  document.getElementById("modalIntro").textContent=day<=2 && today<"2026-12-01"?"PREZENTAČNÍ UKÁZKA · JMÉNA I CENA JSOU SMYŠLENÉ":"Gratulujeme dnešním šťastlivcům!";
  document.getElementById("winners").innerHTML='<div class="winner"><strong>🏆 '+item[0]+'</strong><span>Dnešní výherce</span></div><div class="winner"><strong>🏆 '+item[1]+'</strong><span>Dnešní výherce</span></div>';
- document.getElementById("gift").textContent=item[3]+" "+item[2];\n document.getElementById("wisdomText").textContent=sayings[day-1];
+ document.getElementById("gift").textContent=item[3]+" "+item[2];
+ document.getElementById("wisdomText").textContent=sayings[day-1];
  document.getElementById("modal").classList.add("show");
 }
 function closeModal(){document.getElementById("modal").classList.remove("show")}
